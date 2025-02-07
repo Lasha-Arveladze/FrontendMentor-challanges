@@ -1,0 +1,229 @@
+/* Added font */
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+}
+
+:root {
+  /* These are primary colors */
+  --primary-pale-blue: hsl(225, 100%, 94%);
+  --primary-bright-blue: hsl(245, 75%, 52%);
+
+  /* There are neutral colors */
+  --neutral-pale-blue: hsl(225, 100%, 98%);
+  --neutral-desaturated-blue: hsl(224, 23%, 55%);
+  --neutral-dark-blue: hsl(223, 47%, 23%);
+
+  /* Hover Colors */
+  --hover-color-purple: hsl(245, 83%, 68%);
+
+  /* Fonts */
+  --main-font: "Red Hat Display", sans-serif;
+
+  /* Spacing */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url(images/pattern-background-mobile.svg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: var(--primary-pale-blue);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--main-font);
+}
+
+.cta-container {
+  width: 32.7rem;
+  background-color: white;
+  border-radius: 2rem;
+}
+
+.cta-img {
+  width: 100%;
+  height: 16rem;
+  display: block;
+  border-radius: 2rem 2rem 0 0;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  text-align: center;
+  margin: 0 3.2rem 2.4rem 3.2rem;
+}
+
+.cta-header {
+  margin-bottom: 1.6rem;
+  color: var(--neutral-dark-blue);
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.cta-description {
+  color: var(--neutral-desaturated-blue);
+  font-size: 1.5rem;
+  line-height: 2.5rem; /* With percentages (166.75% it was 74.7px of
+  height) but when we need exactly 75px more relieble to use px */
+  font-weight: 500;
+}
+
+.cta-offer {
+  background-color: var(--neutral-pale-blue);
+  padding: 1.7rem 1.6rem 1.6rem 1.6rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 2.4rem 2.4rem 2.4rem;
+}
+
+.cta-plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-icon {
+  margin-right: 2rem;
+}
+
+.cta-plan-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.plan-text {
+  font-weight: 900;
+  color: var(--neutral-dark-blue);
+  font-size: 1.5rem;
+}
+
+.plan-price {
+  color: var(--neutral-desaturated-blue);
+  font-size: 1.5rem;
+}
+
+.cta-change a {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--primary-bright-blue);
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy {
+  margin: 0 2.4rem 2.4rem 2.4rem;
+  width: calc(100% - 4.8rem);
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary-bright-blue);
+  color: white;
+  padding: 1.5rem 0;
+  border-radius: 1rem;
+  font-weight: 900;
+  font-size: 1.75rem;
+}
+
+.cancel {
+  margin: 0 0 3.2rem 0;
+  border: none;
+  cursor: pointer;
+  color: var(--neutral-desaturated-blue);
+  background-color: white;
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+/* Hover states */
+
+.cta-change a:hover {
+  text-decoration: none;
+  color: var(--hover-color-purple);
+  transition: all 0.3s;
+}
+
+.buy:hover {
+  background-color: var(--hover-color-purple);
+  transition: all 0.3s;
+}
+
+.cancel:hover {
+  color: var(--neutral-dark-blue);
+  transition: all 0.3s;
+}
+
+/* Responsive */
+
+@media (min-width: 960px) {
+  body {
+    background-image: url(images/pattern-background-desktop.svg);
+  }
+}
+
+/* For 1440px */
+@media (min-width: 1440px) {
+  .cta-container {
+    width: 45rem;
+  }
+
+  .cta-img {
+    height: 22rem;
+    margin-bottom: 4.5rem;
+  }
+
+  .cta-text {
+    margin: 0 4.8rem 2rem 4.8rem;
+  }
+
+  .cta-header {
+    font-size: 3.2rem;
+  }
+
+  .cta-description {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+
+  .plan-text {
+    font-size: 1.8rem;
+  }
+
+  .plan-price {
+    font-size: 1.8rem;
+  }
+
+  .cta-change {
+    font-size: 1.6rem;
+  }
+
+  .cta-offer {
+    margin: 0 4.8rem 3.2rem 4.8rem;
+    padding: 2.5rem 2.4rem;
+  }
+
+  .buy {
+    width: calc(100% - 9.6rem);
+    margin-bottom: 3.2rem;
+  }
+
+  .cancel {
+    margin-bottom: 4.8rem;
+  }
+}
