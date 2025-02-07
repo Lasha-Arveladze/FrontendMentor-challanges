@@ -21,6 +21,7 @@ This is the desktop preview of the following project
 ![Desktop Preview](./design/desktop-preview.jpg)
 
 This is the mobile preview of the following project
+
 ![Mobile Preview](./design/mobile-design.jpg)
 
 This is active state
