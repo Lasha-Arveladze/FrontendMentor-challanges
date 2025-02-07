@@ -45,7 +45,7 @@ This project helped my to strengthen my skills in html and css. I learned using 
 
 ### Continued development
 
-I want to develop HTML & CSS skills even more, so next projects will only focus on these shills.
+I want to develop HTML & CSS skills even more, so next projects will only focus on these skills.
 
 ## Author
 
