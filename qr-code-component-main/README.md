@@ -30,7 +30,7 @@ These are the designs of the following component
 
 ## My process
 
-First I analyzed the structure of the given example. Create a variables from given style-guide. As it was one dimensional layout I though Flex-box would be a best way to go and built it using this tool.
+First I analyzed the structure of the given example. Create a variables from given style-guide. As it was one dimensional layout I though there was no use of Flexbox or Grid and build layout only with margins.
 
 ### Built with
 
