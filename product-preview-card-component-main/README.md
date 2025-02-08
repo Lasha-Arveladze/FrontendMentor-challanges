@@ -29,7 +29,7 @@ This is active state
 
 ### Links
 
-- Live Site URL:(https://vercel.com/lasha-arveladzes-projects/frontend-mentor-challanges-hasu)
+- Live Site URL:(https://frontend-mentor-challanges-hasu.vercel.app/)
 
 ## My process
 
