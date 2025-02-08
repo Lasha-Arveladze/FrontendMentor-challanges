@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* Primary Colors */
+  --primary-dark-cyan: hsl(158, 36%, 37%);
+  --primary-cream: hsl(30, 38%, 92%);
+
+  /* Neutral */
+  --neutral-very-dark-blue: hsl(212, 21%, 14%);
+  --neutral-grayish-blue: hsl(228, 12%, 48%);
+  --neutral-white: hsl(0, 0%, 100%);
+
+  /* Hove state */
+  --hover-color: hsl(158, 42%, 18%);
+
+  /* Fonts */
+  --main-font: "Montserrat", sans-serif;
+  --secondary-font: "Fraunces", sans-serif;
+}
+
+/* General Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Setting 1rem to be equal to 10 px */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--primary-cream);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-container-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 34.3rem;
+  border-radius: 1rem;
+  background-color: var(--neutral-white);
+}
+
+.cta-img-mb {
+  width: 100%;
+  display: block;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.cta-img-desktop {
+  display: none;
+}
+
+.cta-text {
+  margin: 2.4rem;
+}
+
+.category {
+  font-size: 1.2rem;
+  height: 1.5rem;
+  letter-spacing: 0.5rem;
+  font-family: var(--main-font);
+  font-weight: 500;
+  color: #6c7289;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.cta-header {
+  font-family: var(--secondary-font);
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  color: var(--neutral-very-dark-blue);
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.cta-description {
+  font-size: 1.4rem;
+  font-family: var(--main-font);
+  line-height: 2.3rem;
+  font-weight: 500;
+  color: #6c7289;
+  margin-bottom: 2.4rem;
+}
+
+.price-box {
+  margin-bottom: 2rem;
+}
+
+.cta-new-price {
+  color: var(--primary-dark-cyan);
+  font-family: var(--secondary-font);
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+  margin-right: 1.9rem;
+}
+
+.cta-old-price {
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  color: #6c7289;
+  transform: translateY(-15%);
+  display: inline-block;
+  text-decoration: line-through;
+  font-family: var(--main-font);
+}
+
+.btn-box {
+  width: 100%;
+  background-color: var(--primary-dark-cyan);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.8rem;
+  padding: 1.5rem 0;
+  transition: all 0.3s;
+}
+
+.icon {
+  margin-right: 1rem;
+}
+
+.cta-button {
+  color: var(--neutral-white);
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.btn-box:hover {
+  background-color: var(--hover-color);
+}
+
+/* Media queries (Responsive) */
+
+@media (min-width: 1440px) {
+  .cta-container-grid {
+    width: 60rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cta-img-mb {
+    display: none;
+  }
+
+  .cta-img-desktop {
+    display: block;
+    width: 100%;
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .cta-text {
+    margin: 3.2rem;
+  }
+
+  .category {
+    margin-bottom: 2rem;
+  }
+
+  .cta-header {
+    margin-bottom: 2.4rem;
+  }
+
+  .cta-description {
+    margin-bottom: 3rem;
+  }
+
+  .price-box {
+    margin-bottom: 3rem;
+  }
+}
