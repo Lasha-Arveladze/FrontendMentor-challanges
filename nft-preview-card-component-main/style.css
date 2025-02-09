@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  /* Primary Colors */
+  --primary-soft-blue: hsl(215, 51%, 70%);
+  --primary-cyan: hsl(178, 100%, 50%);
+
+  /* Neutral Colors */
+  --neutral-dark-blue-bg: hsl(217, 54%, 11%);
+  --neutral-dark-blue-card-bg: hsl(216, 50%, 16%);
+  --neutral-dark-blue-line: hsl(215, 32%, 27%);
+  --neutral-white: hsl(0, 0%, 100%);
+
+  /* Fonts */
+  --main-font: "Outfit", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--neutral-dark-blue-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--main-font);
+  height: 100vh;
+}
+
+.cta-container {
+  width: 32.7rem;
+  padding: 2.4rem;
+  background-color: var(--neutral-dark-blue-card-bg);
+  border-radius: 1.5rem;
+}
+
+.img-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.cta-img {
+  width: 100%;
+  display: block;
+  border-radius: 0.8rem;
+  margin-bottom: 2.4rem;
+  cursor: pointer;
+}
+
+.cta-header {
+  font-size: 2.2rem;
+  color: var(--neutral-white);
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+}
+
+.cta-description {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  color: var(--primary-soft-blue);
+  font-weight: 300;
+  margin-bottom: 1.6rem;
+}
+
+.cta-price-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+
+.cta-price-box span {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.cta-price-box img {
+  margin-right: 0.7rem;
+}
+
+.cta-etherum-text {
+  color: var(--primary-cyan);
+  font-weight: 600;
+}
+
+.cta-time-text {
+  color: var(--primary-soft-blue);
+}
+
+.divider {
+  border-top: 1px solid red;
+  border-bottom: none;
+  border-color: var(--neutral-dark-blue-line);
+  margin-bottom: 1.6rem;
+}
+
+.cta-avatar-box {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-img {
+  width: 3.3rem;
+  height: 3.3rem;
+  border-radius: 50%;
+  border: 1px solid var(--neutral-white);
+  margin-right: 1.6rem;
+}
+
+.cta-avatar-box p {
+  font-size: 1.6rem;
+  color: var(--primary-soft-blue);
+}
+
+.author-name {
+  color: var(--neutral-white);
+  font-weight: 300;
+  cursor: pointer;
+}
+
+/* Hover States */
+
+.hover-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.img-container:hover .hover-icon {
+  opacity: 1;
+}
+
+.img-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 247, 0);
+  border-radius: 0.8rem;
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.img-container:hover::after {
+  background: rgba(0, 255, 247, 0.5);
+}
+
+.cta-header:hover {
+  color: var(--primary-cyan);
+  transition: all 0.3s;
+}
+
+.author-name:hover {
+  color: var(--primary-cyan);
+  transition: all 0.3s;
+}
+
+/* Media Queries */
+
+@media (min-width: 1440px) {
+  .cta-container {
+    width: 35rem;
+    padding-bottom: 3.2rem;
+  }
+
+  .cta-header {
+    margin-bottom: 1.6rem;
+  }
+
+  .cta-description {
+    margin-bottom: 2.4rem;
+  }
+
+  .cta-price-box {
+    margin-bottom: 2.4rem;
+  }
+}
