@@ -1,0 +1,305 @@
+/* Add Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+:root {
+  /* Colors */
+  --color-rose-800: hsl(332, 51%, 32%);
+  --color-rose-50: hsl(330, 100%, 98%);
+  --color-stone-900: hsl(24, 5%, 18%);
+  --color-stone-600: hsl(30, 10%, 34%);
+  --color-stone-150: hsl(24, 18%, 87%);
+  --color-stone-100: hsl(30, 54%, 90%);
+  --color-brown-800: hsl(14, 45%, 36%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* Fonts */
+  --young-font: "Young Serif", sans-serif;
+  --outfit-font: "Outfit", sans-serif;
+
+  /* Spacing */
+  --space-1600: 12.8rem;
+  --space-600: 4.8rem;
+  --space-500: 4rem;
+  --space-400: 3.2rem;
+  --space-300: 2.4rem;
+  --space-200: 1.6rem;
+  --space-150: 1.2rem;
+  --space-100: 0.8rem;
+}
+
+/* Assist classes */
+
+.text-preset-1 {
+  font-size: 3.6rem;
+  font-family: var(--young-font);
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.text-preset-2 {
+  font-size: 2.8rem;
+  font-family: var(--young-font);
+  font-weight: 400;
+}
+
+.text-preset-3 {
+  font-family: var(--outfit-font);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.text-preset-4 {
+  font-size: 1.6rem;
+  line-height: 150%;
+  font-weight: 400;
+  font-family: var(--outfit-font);
+}
+
+.text-preset-4-bold {
+  font-size: 1.6rem;
+  line-height: 150%;
+  font-weight: 700;
+  font-family: var(--outfit-font);
+}
+
+/* Basic reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Starting styling the content */
+
+/*****************************************/
+/* Styling the header */
+.recipe {
+  max-width: 37.5rem;
+  background-color: var(--color-white);
+}
+
+.recipe-container {
+  margin-bottom: var(--space-400);
+}
+
+.recipe-img {
+  width: 100%;
+  display: block;
+  margin-bottom: var(--space-500);
+}
+
+section,
+.text-container {
+  padding: 0 var(--space-400);
+}
+
+.recipe-header {
+  margin-bottom: var(--space-300);
+  color: var(--color-stone-900);
+}
+
+.recipe-description {
+  color: var(--color-stone-600);
+}
+
+/*****************************************/
+/* Styling the preparation box */
+.preparation {
+  margin-bottom: var(--space-400);
+}
+.preparation-box {
+  padding: var(--space-300);
+  background-color: var(--color-rose-50);
+}
+
+.preparation-header {
+  color: var(--color-rose-800);
+  margin-bottom: var(--space-200);
+}
+/*****************************************/
+/* General Classes for All ul>li */
+ul {
+  list-style: none;
+  padding-left: var(--space-100);
+}
+
+ul li::before {
+  content: "•";
+  color: var(--color-rose-800);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+li {
+  position: relative;
+}
+
+ul li,
+ol li {
+  color: var(--color-stone-600);
+  margin-bottom: var(--space-100);
+}
+
+.li-textbox,
+.ol-textbox {
+  margin-left: var(--space-300);
+}
+
+/*****************************************/
+/* Styling Ingredients Section */
+
+.ingredients {
+  margin-bottom: var(--space-400);
+}
+
+.ingredients-header {
+  color: var(--color-rose-800);
+  margin-bottom: var(--space-300);
+}
+
+/*****************************************/
+/* Styling divider */
+
+.divider {
+  margin: 0 var(--space-400) var(--space-400) var(--space-400);
+  color: var(--color-stone-150);
+  border: 1px 0;
+}
+
+/*****************************************/
+/* Styling Instructions Section */
+
+.instructions {
+  margin-bottom: var(--space-400);
+}
+
+.instructions-header {
+  color: var(--color-rose-800);
+  margin-bottom: var(--space-300);
+}
+
+ol {
+  list-style: none;
+  counter-reset: list-counter;
+}
+
+ol li {
+  counter-increment: list-counter;
+  display: flex;
+}
+
+ol li::before {
+  content: counter(list-counter) "."; /* Generate the number */
+  font-weight: bold;
+  color: var(--color-rose-800);
+}
+
+/*****************************************/
+/* Styling Nutrition Section */
+.nutrition {
+  margin-bottom: var(--space-500);
+}
+
+.nutrition-header {
+  color: var(--color-rose-800);
+  margin-bottom: var(--space-300);
+}
+
+.nutrition-table-item {
+  padding-bottom: var(--space-150);
+  border-bottom: 1px solid var(--color-stone-150);
+}
+
+.nutrition-paragraph {
+  margin-bottom: var(--space-300);
+  color: var(--color-stone-600);
+  letter-spacing: 0.1px; /* As I researched and asked questions to chatgpt this problem my be because of Font I used (On different Fonts line breaks exactly where I wanted)this fixes that "per" word doesn't come on second lien and text becames not visually attractive to read */
+}
+
+.nutrition-name {
+  margin: 0 var(--space-200) 0 var(--space-400);
+}
+
+.nutrition-grams {
+  color: var(--color-rose-800);
+}
+
+.nutrition-table-item span {
+  display: inline-block;
+  width: 11.5rem;
+}
+
+.nutrition-table-item:last-child {
+  border-bottom: none;
+}
+
+/* Responsive design */
+/* For Tablets */
+@media (min-width: 768px) {
+  body {
+    background-color: var(--color-stone-100);
+  }
+
+  .recipe {
+    max-width: 61.6rem;
+    border-radius: 2.4rem;
+    margin: var(--space-1600);
+  }
+
+  .recipe-container {
+    margin: var(--space-500) var(--space-500) var(--space-400) var(--space-500);
+  }
+
+  .recipe-img {
+    border-radius: 1.2rem;
+    height: 30rem;
+  }
+
+  .text-preset-1 {
+    font-size: 4rem;
+  }
+
+  .text-container {
+    padding: 0;
+  }
+
+  .nutrition-table-item span {
+    width: 22.8rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .recipe {
+    max-width: 73.6rem;
+  }
+
+  .recipe-img {
+    border-radius: 1.2rem;
+    height: 30rem;
+  }
+
+  .text-preset-1 {
+    font-size: 4rem;
+  }
+
+  .text-container {
+    padding: 0;
+  }
+
+  .nutrition-table-item span {
+    width: 28.8rem;
+  }
+}
