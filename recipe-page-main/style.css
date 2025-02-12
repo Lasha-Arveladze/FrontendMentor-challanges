@@ -256,7 +256,7 @@ ol li::before {
   .recipe {
     max-width: 61.6rem;
     border-radius: 2.4rem;
-    margin: var(--space-1600);
+    margin: var(--space-1600) auto;
   }
 
   .recipe-container {
