@@ -24,7 +24,7 @@ This is the mobile preview of the following project
 
 ### Links
 
-- Live Site URL:()
+- Live Site URL:(https://frontend-mentor-challanges-6t8e.vercel.app/)
 
 ## My process
 
