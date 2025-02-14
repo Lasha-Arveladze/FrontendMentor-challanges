@@ -1,0 +1,269 @@
+/* Adding Font */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  /* Colors */
+  --color-blue-900: hsl(233, 54%, 16%);
+  --color-blue-600: hsl(234, 25%, 52%);
+  --color-pink-600: hsl(341, 92%, 62%);
+  --color-pink-300: hsl(341, 100%, 83%);
+  --color-grey: hsl(232, 10%, 56%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-white-gradient: hsl(236, 100%, 97%);
+
+  /* Gradients */
+  --color-gradient-pink: linear-gradient(
+    hsl(13, 100%, 64%),
+    hsl(322, 87%, 55%)
+  );
+
+  --color-gradient-pink-light: linear-gradient(
+    hsl(13, 100%, 85%),
+    hsl(322, 87%, 75%)
+  );
+
+  --color-gradient-purple: linear-gradient(
+    hsl(237, 100%, 64%),
+    hsl(322, 87%, 55%)
+  );
+
+  --color-gradient-purple-light: linear-gradient(
+    180deg,
+    hsl(280, 100%, 80%),
+    hsl(330, 100%, 70%)
+  );
+
+  --color-gradient-background: linear-gradient(
+    var(--color-white),
+    var(--color-white-gradient)
+  );
+
+  /* Fonts */
+  --main-font: "Plus Jakarta Sans", sans-serif;
+
+  /* Spacing */
+
+  --space-1800: 14.4rem;
+  --space-1600: 12.8rem;
+  --space-1000: 8rem;
+  --space-800: 6.4rem;
+  --space-700: 5.6rem;
+  --space-600: 4.8rem;
+  --space-550: 4.4rem;
+  --space-500: 4rem;
+  --space-400: 3.2rem;
+  --space-300: 2.4rem;
+  --space-250: 2rem;
+  --space-200: 1.6rem;
+  --space-150: 1.2rem;
+  --space-100: 0.8rem;
+}
+
+/* Added supportive classes */
+
+.text-preset-1 {
+  font-size: 4rem;
+  line-height: 120%;
+  font-weight: 900;
+}
+
+.text-preset-2 {
+  font-size: 4rem;
+  line-height: 120%;
+  font-weight: 700;
+}
+
+.text-preset-3 {
+  font-size: 2.4rem;
+  line-height: 120%;
+  font-weight: 700;
+}
+
+.text-preset-4 {
+  font-size: 2rem;
+  line-height: 120%;
+  font-weight: 700;
+}
+
+.text-preset-5 {
+  font-size: 1.8rem;
+  line-height: 150%;
+  font-weight: 400;
+}
+.text-preset-6 {
+  font-size: 1.6rem;
+  line-height: 150%;
+  font-weight: 600;
+}
+
+.text-preset-7 {
+  font-size: 1.8rem;
+  line-height: 150%;
+  font-weight: 800;
+}
+
+/* Starting styling the page */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Setting the font-size that 1rem = 10px */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--main-font);
+  background: var(--color-gradient-background);
+}
+
+/* Header */
+
+.container {
+  max-width: 37.5rem;
+  margin: 0 auto;
+}
+
+.header {
+  padding: var(--space-200) var(--space-250);
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: block;
+  height: 2rem;
+}
+
+.nav-btn {
+  background-color: var(--color-blue-900);
+  transition: all 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: var(--color-blue-600);
+}
+
+.cta-button {
+  border: none;
+  cursor: pointer;
+  color: var(--color-white);
+  padding: var(--space-200) var(--space-400);
+  border-radius: 2.8rem;
+  font-family: inherit;
+}
+
+/* Hero Section */
+
+.main-box {
+  padding: 0 var(--space-250);
+}
+
+.section-hero {
+  padding: var(--space-800) 0;
+}
+
+.hero-headline {
+  color: var(--color-blue-900);
+  margin-bottom: var(--space-300);
+}
+
+.hero-description {
+  color: var(--color-grey);
+  margin-bottom: var(--space-500);
+}
+
+.hero-btn {
+  background: var(--color-gradient-pink);
+  margin-bottom: var(--space-800);
+}
+
+.hero-btn:hover {
+  background: var(--color-gradient-pink-light);
+}
+
+.hero-img {
+  width: 100%;
+  height: 32rem;
+  display: block;
+}
+
+/* Courses Section */
+.section-courses {
+  padding: var(--space-800) 0 var(--space-1000);
+}
+
+.course-header-box {
+  background: var(--color-gradient-pink);
+  color: var(--color-white);
+  padding: var(--space-400);
+  border-radius: 1.5rem;
+  margin-bottom: var(--space-600);
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--space-800);
+}
+
+.course-item {
+  position: relative;
+  background-color: var(--color-white);
+  padding: var(--space-800) var(--space-400) var(--space-500) var(--space-400);
+  border-radius: 1.5rem;
+}
+
+.course-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(50%, -50%);
+}
+
+.course-item-header {
+  color: var(--color-blue-900);
+  margin-bottom: var(--space-300);
+}
+
+.course-item-description {
+  color: var(--color-grey);
+  margin-bottom: var(--space-300);
+}
+
+.course-item-cta a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--color-pink-600);
+  transition: all 0.3s;
+}
+
+.course-item-cta a:hover {
+  color: var(--color-pink-300);
+}
+
+/* Footer */
+
+.footer {
+  background-color: var(--color-blue-900);
+  padding: var(--space-300) var(--space-200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-btn {
+  background: var(--color-gradient-purple);
+  cursor: pointer;
+}
+
+.footer-btn:hover {
+  background: var(--color-gradient-purple-light);
+}
