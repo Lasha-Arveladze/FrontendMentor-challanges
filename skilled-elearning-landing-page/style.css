@@ -113,11 +113,13 @@
 /* Setting the font-size that 1rem = 10px */
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
   font-family: var(--main-font);
   background: var(--color-gradient-background);
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -145,6 +147,7 @@ body {
 .nav-btn {
   background-color: var(--color-blue-900);
   transition: all 0.3s;
+  z-index: 999;
 }
 
 .nav-btn:hover {
@@ -189,10 +192,19 @@ body {
   background: var(--color-gradient-pink-light);
 }
 
-.hero-img {
+.hero-img-mb {
   width: 100%;
   height: 32rem;
   display: block;
+}
+
+.hero-img-tb {
+  width: 100%;
+  display: none;
+}
+
+.hero-img-ds {
+  display: none;
 }
 
 /* Courses Section */
@@ -266,4 +278,103 @@ body {
 
 .footer-btn:hover {
   background: var(--color-gradient-purple-light);
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .container {
+    max-width: 76.8rem;
+  }
+
+  .header {
+    padding: var(--space-300) var(--space-550);
+  }
+
+  .main-box {
+    padding: 0 var(--space-550);
+  }
+
+  .section-hero {
+    display: flex;
+    position: relative;
+  }
+  .hero-img-mb {
+    display: none;
+  }
+
+  .hero-img-tb {
+    display: block;
+    position: absolute;
+    top: -180px;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.4rem;
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--space-300);
+  }
+
+  .course-header-box {
+    height: 100%;
+  }
+
+  .footer {
+    padding: var(--space-300) var(--space-550);
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 112rem;
+  }
+
+  .header {
+    padding: var(--space-300) 0;
+  }
+
+  .main-box {
+    padding: 0;
+  }
+
+  .hero-grid {
+    gap: var(--space-400);
+  }
+
+  .hero-img-tb {
+    display: none;
+  }
+
+  .hero-text {
+    width: 45.7rem;
+  }
+
+  .hero-img-ds {
+    display: block;
+    width: 80%;
+    height: auto;
+    position: absolute;
+    top: -270px;
+    right: -450px;
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: var(--space-400);
+    row-gap: var(--space-1000);
+  }
+
+  .section-courses {
+    padding-top: 9.2rem;
+  }
+
+  .footer {
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--space-300) 16rem;
+  }
 }
