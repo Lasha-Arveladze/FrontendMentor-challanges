@@ -19,7 +19,7 @@ This is the preview of the following project
 
 ### Links
 
-- Live Site URL:(https://frontend-mentor-challanges-fle4.vercel.app/)
+- Live Site URL:()
 
 ## My process
 

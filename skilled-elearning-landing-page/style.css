@@ -294,9 +294,13 @@ body {
     padding: 0 var(--space-550);
   }
 
+  .cta-button {
+    padding: 1.05rem var(--space-300);
+  }
+
   .section-hero {
-    display: flex;
     position: relative;
+    padding-top: 10.55rem;
   }
   .hero-img-mb {
     display: none;
@@ -311,7 +315,11 @@ body {
   .hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 2.4rem;
+    column-gap: 2.6rem;
+  }
+
+  .section-courses {
+    padding: 9.2rem 0 var(--space-1800) 0;
   }
 
   .course-grid {
@@ -337,6 +345,30 @@ body {
     padding: var(--space-300) 0;
   }
 
+  .cta-button {
+    padding: var(--space-200) var(--space-400);
+  }
+
+  .section-hero {
+    padding-top: 17.45rem;
+  }
+
+  .text-preset-1 {
+    font-size: 5.6rem;
+  }
+
+  .text-preset-3 {
+    font-size: 3.2rem;
+  }
+
+  .text-preset-4 {
+    font-size: 2.4rem;
+  }
+
+  .text-preset-5 {
+    font-weight: normal;
+  }
+
   .main-box {
     padding: 0;
   }
@@ -358,7 +390,7 @@ body {
     width: 80%;
     height: auto;
     position: absolute;
-    top: -270px;
+    top: -150px;
     right: -450px;
   }
 
