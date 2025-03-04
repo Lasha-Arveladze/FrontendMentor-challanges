@@ -1,0 +1,428 @@
+/* Adding fonts */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&display=swap");
+
+:root {
+  /* Colors */
+
+  --color-green: hsl(150, 100%, 63%);
+  --color-purple-900: hsl(273, 85%, 13%);
+  --color-purple-500: hsl(271, 12%, 34%);
+  --color-purple-100: hsl(276, 100%, 99%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* Spacing */
+
+  --space-3700: 29.6rem;
+  --space-2100: 16.8rem;
+  --space-1800: 14.4rem;
+  --space-1600: 12.8rem;
+  --space-1400: 11.2rem;
+  --space-1100: 8.8rem;
+  --space-1000: 8rem;
+  --space-800: 6.4rem;
+  --space-700: 5.6rem;
+  --space-550: 4.4rem;
+  --space-500: 4rem;
+  --space-400: 3.2rem;
+  --space-350: 2.8rem;
+  --space-250: 2rem;
+  --space-200: 1.6rem;
+  --space-150: 1.2rem;
+  --space-100: 8rem;
+
+  /* Fonts */
+  --main-font: "Fraunces", serif;
+  --secondary-font: "Manrope", sans-serif;
+}
+
+/* Typography */
+
+.text-preset-1 {
+  font-size: 4.5rem;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.text-preset-2 {
+  font-size: 2.6rem;
+  line-height: 120%;
+}
+
+.text-preset-3 {
+  font-size: 2.4rem;
+  line-height: 120%;
+}
+
+.text-preset-1,
+.text-preset-2,
+.text-preset-3 {
+  font-family: var(--main-font);
+  font-weight: 600;
+}
+
+.text-preset-4 {
+  font-size: 1.6rem;
+  line-height: 180%;
+  font-weight: normal;
+}
+
+.text-preset-5 {
+  font-size: 1.8rem;
+  line-height: 150%;
+  font-weight: 700;
+}
+
+.text-preset-4,
+.text-preset-5 {
+  font-family: var(--secondary-font);
+}
+
+/* Starting designing site */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Styling header section */
+
+.header-section {
+  background-color: var(--color-purple-900);
+  padding-top: var(--space-400);
+  height: 45rem;
+  width: 100%;
+  position: relative;
+}
+
+.container {
+  width: 33.5rem;
+  margin: 0 auto;
+}
+
+.header-nav-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-700);
+}
+
+.header-nav-link {
+  text-decoration: none;
+  color: var(--color-white);
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--color-green);
+  transition: all 0.3s;
+}
+
+.header-nav-link:hover {
+  color: var(--color-green);
+}
+
+.header-hero {
+  text-align: center;
+}
+
+.hero-title {
+  color: var(--color-white);
+  margin-bottom: var(--space-500);
+}
+
+.underline {
+  border-bottom: 2px solid var(--color-green);
+  margin-top: -0.5px;
+  display: inline-block;
+}
+
+.bg-pattern-1,
+.bg-pattern-2 {
+  display: none;
+}
+
+.cta-button {
+  padding: var(--space-150) var(--space-400);
+  cursor: pointer;
+  background-color: var(--color-green);
+  font-family: var(--secondary-font);
+  font-size: 1.6rem;
+  line-height: 180%;
+  border: 1px solid var(--color-green);
+  transition: all 0.3s;
+}
+
+.cta-button:hover {
+  color: var(--color-green);
+  background-color: transparent;
+}
+
+.header-hero-img {
+  position: relative;
+}
+
+.hero-img {
+  position: absolute;
+  width: 100%;
+  top: 9rem;
+  z-index: 2;
+}
+
+.hero-wave {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 1;
+}
+
+.hero-wave svg {
+  position: relative;
+  display: block;
+  width: calc(273% + 1.3px);
+  height: 111px;
+}
+
+.hero-wave .shape-fill {
+  fill: #24053d;
+}
+
+/* Styling info section */
+
+.main {
+  background-color: var(--color-purple-100);
+  padding-top: 25rem;
+  position: relative;
+  margin-bottom: 41.6rem;
+}
+
+.info-section {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--space-400);
+}
+
+.info-number {
+  border: 1px solid var(--color-purple-900);
+  border-radius: 50%;
+  height: 4.8rem;
+  width: 4.8rem;
+  padding: 0.4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.4rem;
+  color: var(--color-purple-500);
+}
+.info-header {
+  color: var(--color-purple-900);
+  margin-bottom: var(--space-200);
+}
+.info-description {
+  color: var(--color-purple-900);
+}
+
+.main-wave {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.main-wave svg {
+  position: relative;
+  display: block;
+  width: calc(273% + 1.3px);
+  height: 123px;
+}
+
+.main-wave .shape-fill-main {
+  fill: #fcf8ff;
+}
+
+/* Styling Article */
+
+.article {
+  position: relative;
+  margin-bottom: var(--space-1000);
+}
+
+.founder-img {
+  width: 28rem;
+  position: absolute;
+  top: -60%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.founder-text-box {
+  text-align: center;
+  background-color: var(--color-purple-900);
+  color: var(--color-white);
+  padding: var(--space-400) 0;
+}
+
+.bg-pattern-3 {
+  display: none;
+}
+
+.founder-header {
+  margin: 0 var(--space-700) var(--space-400) var(--space-700);
+}
+
+.founder-description {
+  margin: 0 var(--space-400) var(--space-400) var(--space-400);
+}
+
+/* Styling footer */
+
+.footer {
+  text-align: center;
+  margin-bottom: var(--space-1000);
+}
+
+.footer-company-logo {
+  margin-bottom: var(--space-700);
+}
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer a {
+  margin-right: var(--space-350);
+  text-decoration: none;
+}
+
+footer a:last-of-type {
+  margin-right: 0;
+}
+
+.icon {
+  transition: all 0.3s;
+}
+
+.icon:hover {
+  filter: brightness(0) saturate(100%) invert(12%) sepia(59%) saturate(744%)
+    hue-rotate(230deg) brightness(92%) contrast(93%);
+}
+
+/* Responsive design for Tablets */
+
+@media (min-width: 768px) {
+  .container {
+    width: 68rem;
+  }
+
+  .header-hero {
+    padding: 0 2.25rem;
+  }
+
+  .text-preset-1 {
+    font-size: 7rem;
+  }
+
+  .text-preset-2 {
+    font-size: 4.8rem;
+  }
+
+  .bg-pattern-1 {
+    display: block;
+    position: absolute;
+    left: -25%;
+    top: 20%;
+  }
+
+  .bg-pattern-2 {
+    display: block;
+    position: absolute;
+    right: -10%;
+    bottom: 0;
+  }
+
+  .hero-img {
+    width: 60.28rem;
+    height: 29.6rem;
+    top: 4.5rem;
+    left: 4.5rem;
+  }
+
+  .main {
+    padding-top: 40rem;
+  }
+
+  .info-section {
+    text-align: left;
+  }
+
+  .info-container {
+    flex-direction: row;
+  }
+
+  .info-number {
+    margin-right: var(--space-700);
+  }
+
+  .info-header {
+    margin-bottom: var(--space-350);
+  }
+
+  .founder-text-box {
+    text-align: left;
+    padding-top: var(--space-500);
+    width: 50.4rem;
+    right: 0;
+  }
+
+  .founder-info {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .founder-img {
+    left: 25%;
+    top: -50%;
+  }
+
+  .founder-header {
+    margin: 0 0 var(--space-400) var(--space-500);
+  }
+
+  .founder-description {
+    margin: 0 var(--space-500) var(--space-400) var(--space-500);
+  }
+
+  .cta-button {
+    margin-left: var(--space-500);
+  }
+
+  .bg-pattern-3 {
+    display: block;
+    position: absolute;
+    top: 70%;
+  }
+}
+
+/* Responsive design for Laptops */
