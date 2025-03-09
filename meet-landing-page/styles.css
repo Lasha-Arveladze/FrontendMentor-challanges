@@ -1,0 +1,287 @@
+/* Adding font */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  /* Colors */
+  --primary-color-cyan-600: hsl(192, 37%, 48%);
+  --primary-color-cyan-300: hsl(192, 90%, 77%);
+  --primary-color-purple-600: hsl(268, 34%, 53%);
+  --primary-color-purple-300: hsl(268, 100%, 86%);
+  --primary-color-slate-900: hsl(240, 21%, 20%);
+  --primary-color-slate-600: hsl(240, 10%, 57%);
+  --primary-color-slate-300: hsl(240, 18%, 85%);
+  --primary-color-white: hsl(0, 0%, 98%);
+
+  /* Spacing */
+  --space-1400: 11.2rem;
+  --sapce-1000: 8rem;
+  --space-900: 7.2rem;
+  --space-800: 6.4rem;
+  --space-700: 5.6rem;
+  --space-500: 4rem;
+  --sapce-400: 3.2rem;
+  --space-300: 2.4rem;
+  --space-200: 1.6rem;
+  --space-100: 0.8rem;
+  --space-50: 0.4rem;
+
+  /* Font */
+
+  --main-font: "Red Hat Display", sans-serif;
+}
+
+/* Helper Classes */
+
+.text-preset-1 {
+  font-size: 4rem;
+  line-height: 110%;
+}
+
+.text-preset-2 {
+  font-size: 3.2rem;
+  line-height: 110%;
+}
+
+.text-preset-3 {
+  font-size: 1.2rem;
+  line-height: 110%;
+  letter-spacing: 0.4rem;
+}
+
+.text-preset-4 {
+  font-size: 1.6rem;
+  line-height: 150%;
+  font-weight: 500;
+}
+
+.text-preset-5 {
+  font-size: 1.6rem;
+  line-height: 150%;
+}
+
+.text-preset-1,
+.text-preset-2,
+.text-preset-3,
+.text-preset-4,
+.text-preset-5 {
+  font-family: var(--main-font);
+}
+
+/* Styling the Site itself */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--primary-color-white);
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-800);
+}
+
+.container {
+  max-width: 37.5rem;
+  margin: 0 var(--sapce-400);
+}
+
+.company-logo {
+  margin-top: 4.8rem;
+}
+
+/* Styling hero section */
+
+.hero,
+.about,
+.ordering-container,
+.about-text-box,
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-imgs-box {
+  width: 43.4rem;
+  margin-bottom: 4.8rem;
+}
+
+.hero-imgs {
+  width: 100%;
+}
+
+.hero-text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-header {
+  color: var(--primary-color-slate-900);
+  font-weight: 800;
+  margin-bottom: var(--space-300);
+}
+
+.hero-description {
+  color: var(--primary-color-slate-600);
+  margin-bottom: var(--space-300);
+}
+
+.btn-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: var(--space-200) var(--space-500);
+  cursor: pointer;
+  border: none;
+  color: var(--primary-color-white);
+  border-radius: 3rem;
+  font-weight: 800;
+  transition: all 0.3s;
+}
+
+.btn-cta {
+  background-color: var(--primary-color-cyan-600);
+  margin-bottom: var(--space-200);
+}
+
+.btn-version-text {
+  color: var(--primary-color-cyan-300);
+}
+
+.btn-purple {
+  background-color: var(--primary-color-purple-600);
+  margin-bottom: var(--sapce-400);
+}
+
+.btn-cta:hover,
+.btn-cta:active {
+  background-color: #71c0d4;
+}
+
+.btn-purple:hover,
+.btn-purple:active {
+  background-color: #b18bdd;
+}
+
+/* Styling about section */
+
+.ordering-container {
+  margin-bottom: var(--space-800);
+}
+
+.vertical-line {
+  height: 8rem;
+  width: 1px;
+  background-color: var(--primary-color-slate-300);
+  margin-top: var(--sapce-400);
+}
+
+.number {
+  color: var(--primary-color-slate-600);
+  border: 1px solid var(--primary-color-slate-300);
+  border-radius: 50%;
+  padding: 1.6rem 1.9rem;
+  font-weight: 800;
+}
+
+.img-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-200);
+  margin-bottom: var(--space-800);
+}
+
+.about-img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.about-info {
+  color: var(--primary-color-cyan-600);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: var(--space-200);
+}
+
+.about-text-box {
+  text-align: center;
+  margin-bottom: var(--space-800);
+}
+
+.about-heading {
+  color: var(--primary-color-slate-900);
+  font-weight: 900;
+  margin-bottom: var(--sapce-400);
+}
+
+.about-description {
+  color: var(--primary-color-slate-600);
+}
+
+/* Styling Footer */
+
+footer {
+  position: relative;
+  margin-top: 10.8rem;
+  background: linear-gradient(
+      hsla(191, 33%, 48%, 0.5),
+      hsla(191, 33%, 48%, 0.5)
+    ),
+    url("assets/desktop/image-footer.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+footer .ordering-container {
+  margin-bottom: 0;
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+footer .ordering-container .number {
+  background-color: var(--primary-color-white);
+}
+
+footer .ordering-container .vertical-line {
+  margin-top: 0;
+}
+
+.footer-text-container {
+  height: 37.4rem;
+  text-align: center;
+  color: var(--primary-color-white);
+}
+
+.footer-heading {
+  padding-top: var(--space-800);
+  margin-bottom: var(--space-300);
+}
+
+.footer-description {
+  margin-bottom: var(--space-300);
+}
+
+.footer-version-text {
+  color: var(--primary-color-purple-300);
+}
