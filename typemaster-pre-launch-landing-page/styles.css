@@ -1,0 +1,203 @@
+/* Importing Font */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* Colors */
+  --primary-color-orange: hsl(22, 89%, 52%);
+  --primary-color-light-orange: hsl(22, 100%, 69%);
+  --primary-color-blue: hsl(220, 50%, 17%);
+  --primary-color-dark-gray: hsl(221, 23%, 58%);
+  --primary-color-light-gray: hsl(198, 28%, 93%);
+  --primary-color-white: hsl(0, 0%, 100%);
+
+  /* Font */
+  --main-font: "Barlow", sans-serif;
+}
+
+/* Text Styles */
+.text-preset-1 {
+  font-size: 4.8rem;
+  line-height: 4.8rem;
+  text-transform: uppercase;
+}
+
+.text-preset-2 {
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+  text-transform: uppercase;
+}
+
+.text-preset-3 {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  text-transform: uppercase;
+}
+
+.text-preset-4 {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+/* Styling Page itself */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--main-font);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 32.7rem;
+  margin: 0 auto;
+}
+
+/* Styling the header */
+
+header {
+  padding-top: 2.3rem;
+  margin-bottom: 6.4rem;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  display: block;
+}
+
+.btn-pre-order {
+  border: none;
+  padding: 1.1rem 1.4rem;
+  border-radius: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1.4rem;
+  font-weight: bold;
+  height: 4.8rem;
+}
+
+.header-btn {
+  background-color: var(--primary-color-light-gray);
+  color: var(--primary-color-blue);
+}
+
+.header-btn:hover {
+  background-color: var(--primary-color-blue);
+  color: var(--primary-color-white);
+}
+
+/* Hero section */
+
+.section-hero {
+  margin-bottom: 2.4rem;
+}
+
+.gird-columns-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.hero-text-box {
+  margin-bottom: 6.4rem;
+}
+
+.hero-title {
+  color: var(--primary-color-blue);
+  margin-bottom: 3.2rem;
+}
+
+.hero-description {
+  color: var(--primary-color-dark-gray);
+  margin-bottom: 3.2rem;
+}
+
+.hero-btn {
+  background-color: var(--primary-color-orange);
+  color: var(--primary-color-white);
+  margin-right: 3.2rem;
+  transition: all 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: var(--primary-color-light-orange);
+}
+
+.release-date {
+  color: var(--primary-color-dark-gray);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.hero-img {
+  width: 37.2rem;
+  border-radius: 1.5rem;
+  display: block;
+}
+
+/* Styling about section */
+
+.section-about {
+  margin-bottom: 11.1rem;
+}
+
+.about-img-box {
+  display: flex;
+  gap: 2.4rem;
+  transform: translateX(-45px);
+  margin-bottom: 7.5rem;
+}
+
+.img-wrapper {
+  position: relative;
+  width: 12.9rem;
+}
+
+.img-wrapper::after {
+  content: "";
+  position: absolute;
+  border-radius: 1.5rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(22, 89%, 52%, 0.8); /* Orange overlay */
+}
+
+.about-img-left {
+  width: 12.9rem;
+  border-radius: 1.5rem;
+}
+
+.about-img-right {
+  width: 22rem;
+  border-radius: 1.5rem;
+}
+
+.about-text-box {
+  text-align: center;
+}
+
+.about-title {
+  margin: 0 6rem 2.4rem 6rem;
+  font-weight: bold;
+  color: var(--primary-color-blue);
+}
+
+.about-description {
+  color: var(--primary-color-dark-gray);
+}
